@@ -1,0 +1,52 @@
+{
+    "projects": [
+      {
+        "title": "TritonFitness App",
+        "image": "tflogo.webp",
+        "alt": "TritonFitness logo",
+        "description": "Worked in a team to develop a full-stack web-based app to encourage UCSD students to manage stress through fitness.",
+        "role": "Frontend Software Engineer",
+        "date": "Sep '24 - Dec '24",
+        "technologies": ["HTML", "CSS", "JavaScript", "React", "MongoDB"],
+        "contributions": "Implemented application UI and API integration",
+        "bullets": [
+          "Developed MERN stack application",
+          "Created UI/UX design with React",
+          "Integrated fitness-tracking features"
+        ],
+        "link": "https://github.com/froguro/CSE110-TritonFitness.git"
+      },
+      {
+        "title": "Parental Concerns in Roblox - Early Research Scholars Program",
+        "image": "ersp_symp.png",
+        "alt": "Four students in front of research poster holding up completion awards",
+        "description": "Carried out an independent research project over the course of an academic year as part of the Early Research Scholars Program.",
+        "role": "Researcher, ML Engineer, Software Engineer",
+        "date": "Sep '23 - Sep '24",
+        "technologies": ["pyLDAvis", "Jupyter Notebook", "Git", "Unsupervised Machine Learning"],
+        "contributions": "Conducted data analysis and developed ML models",
+        "bullets": [
+          "Investigated parental concerns in Roblox",
+          "Analyzed gaming trends using machine learning",
+          "Paper accepted to IEEE ISTAS 2024"
+        ],
+        "link": "https://ieeexplore.ieee.org/author/797691860140640"
+      },
+      {
+        "title": "Travel Planner (ACM Project Teams)",
+        "image": "worldwide.jpg",
+        "alt": "Stock image of a plane going around the world",
+        "description": "Developed a travel planner website where users get personalized itinerary suggestions based on their destination.",
+        "role": "Frontend Software Engineer",
+        "date": "Apr '24 - Jun '24",
+        "technologies": ["MongoDB", "Express.js", "React.js", "Node.js"],
+        "contributions": "Implemented interactive UI and API integration",
+        "bullets": [
+          "Used Google Maps & Yelp APIs",
+          "Designed and built frontend with React",
+          "Worked on database integration with MongoDB"
+        ],
+        "link": "https://github.com/FaZeDrug/hackschool-fa23"
+      }
+    ]
+  }
