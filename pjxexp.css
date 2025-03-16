@@ -22,6 +22,7 @@ html, body {
     --background-color: white;
     --text-color: black;
     --border-color: black;
+    --accent-color:grey;
 }
 
 /* Dark Mode */
@@ -29,6 +30,7 @@ html, body {
     --background-color: black;
     --text-color: white;
     --border-color: white;
+    --accent-color:grey;
 }
 
 body {
@@ -127,17 +129,36 @@ h2{
     margin-bottom: 30px; /* spacing between navbar and the "project" text*/
 }
 
-/* Ensures project container is centered and structured properly */
+/* local/remote button styling*/
+.button-container {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#load-remote, #load-local {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: var(--border-color);
+    color: var(--background-color);
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+#load-remote:hover, #load-local:hover {
+    background-color: var(--accent-color);
+}
+
 .projects-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    max-width: 900px; /* Adjust width to match design */
-    margin: 0 auto; /* Centering */
+    max-width: 900px; 
+    margin: 0 auto; 
 }
 
-/* Styles each project item */
 article {
     display: flex;
     flex-direction: row; /* Side-by-side layout */
