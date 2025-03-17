@@ -82,6 +82,33 @@ body {
     content: "🌞"; /* Sun icon for light mode */
 }
 
+/* media queries below that ensure the NT and the toggle don't overlap on mobile */
+@media (max-width: 768px) {
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+        position: relative;
+    }
+
+    nav .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap; /* this ensures NT never breaks */
+    }
+
+    .theme-toggle {
+        position: absolute;
+        left: calc(50% + 30px); /* makes sure the the sun icon slightly to the right */
+        transform: translateX(-50%);
+        font-size: 18px;
+    }
+}
+
 .noscript-warning {
     background-color: red;
     color: white;
@@ -185,6 +212,10 @@ nav ul { /* styling navbar ul links only, we have to do this bc there's ul in th
 
 .wow{
     margin-bottom: 50px;
+}
+
+.funfacts{
+    margin-bottom: 50px
 }
 
 
