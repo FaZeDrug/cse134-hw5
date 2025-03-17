@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <script defer src="crud.js"></script>
+</head>
+<body>
+    <h1>CRUD Actions</h1>
+    
+    <input type="text" id="dataInput" placeholder="Enter some data">
+    <button onclick="createData()">Create</button>
+    
+    <h2>Stored Data:</h2>
+    <ul id="dataList"></ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", loadData);
+
+        function createData() {
+            let input = document.getElementById("dataInput").value;
+            if (input.trim() === "") return alert("Enter valid data!");
+
+            let data = JSON.parse(localStorage.getItem("items")) || [];
+            data.push(input);
+            localStorage.setItem("items", JSON.stringify(data));
+            document.getElementById("dataInput").value = "";
+            loadData();
+        }
+
+        function loadData() {
+            let data = JSON.parse(localStorage.getItem("items")) || [];
+            let list = document.getElementById("dataList");
+            list.innerHTML = "";
+
+            data.forEach((item, index) => {
+                let li = document.createElement("li");
+                li.textContent = item;
+
+                let updateBtn = document.createElement("button");
+                updateBtn.textContent = "Update";
+                updateBtn.onclick = () => updateData(index);
+
+                let deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Delete";
+                deleteBtn.onclick = () => deleteData(index);
+
+                li.appendChild(updateBtn);
+                li.appendChild(deleteBtn);
+                list.appendChild(li);
+            });
+        }
+
+        function updateData(index) {
+            let newValue = prompt("Enter new value:");
+            if (newValue === null || newValue.trim() === "") return;
+
+            let data = JSON.parse(localStorage.getItem("items")) || [];
+            data[index] = newValue;
+            localStorage.setItem("items", JSON.stringify(data));
+            loadData();
+        }
+
+        function deleteData(index) {
+            let data = JSON.parse(localStorage.getItem("items")) || [];
+            data.splice(index, 1);
+            localStorage.setItem("items", JSON.stringify(data));
+            loadData();
+        }
+
+    </script>
+</body>
+</html>
+`
